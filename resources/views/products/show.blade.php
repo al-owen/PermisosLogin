@@ -10,7 +10,9 @@
                 <div class="flex justify-between items-center mt-4">
                     <span class="text-2xl font-bold text-gray-900">€{{ number_format($product->price, 2) }}</span>
                     {{-- rol locked --}}
-                    <a href="{{ route('products.edit', $product->id) }}" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700">Editar</a>
+                    @can('edit')
+                        <a href="{{ route('products.edit', $product->id) }}" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700">Editar</a>
+                    @endcan
                 </div>
             </div>
         </div>

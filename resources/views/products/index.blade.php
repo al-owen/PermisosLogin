@@ -12,7 +12,6 @@
                     <p class="text-gray-600">{{ $product->description }}</p>
                     <p class="text-gray-800 font-bold">€{{ number_format($product->price, 2) }}</p>
                     <br>
-                    {{-- rol locked --}}
                     <a href="{{ route('products.show', $product->id) }}" class="px-3 py-2 bg-blue-500 text-white rounded hover:bg-blue-700">Mostrar</a>
                 </div>
             @endforeach
